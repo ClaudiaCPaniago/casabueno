@@ -1,0 +1,406 @@
+:root {
+  --primary: #2e2e2e;
+  --secondary: #d9a91a;
+  --accent: #bf5b21;
+  --text: #333333;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Header */
+header {
+  background-color: var(--light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-main {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo-sub {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--primary);
+  margin-left: 1rem;
+  border-left: 1px solid var(--primary);
+  padding-left: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/img//wallpaper6.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--light);
+  padding: 0.8rem 2rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  border: 2px solid var(--accent);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.section-title strong {
+  font-weight: 700;
+}
+
+/* Products Section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+}
+
+.product-card {
+  background-color: var(--light);
+  overflow: hidden;
+  transition: transform 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-desc {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  background-color: var(--light);
+}
+
+.about-img {
+  width: 50%;
+  margin-right: 2rem;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.about-content h2 strong {
+  font-weight: 700;
+}
+
+.about-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+/*contato*/
+#contato {
+  background-color: var(--light);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#contato .section-title {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#contato p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#contato i {
+  color: var(--primary);
+  font-size: 1.2rem;
+  min-width: 25px;
+}
+
+#contato h3 {
+  margin: 2.5rem 0 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background-color: var(--light);
+    transition: left 0.3s;
+    z-index: 99;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  nav ul li {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 3rem 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo-main {
+    font-size: 1.4rem;
+  }
+
+  .logo-sub {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .products,
+  .about {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .product-info,
+  .about-content {
+    padding: 1.2rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+}
