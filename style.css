@@ -19,6 +19,10 @@ body {
   line-height: 1.6;
   text-align: justify;
 }
+h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
 
 /* Header */
 header {
@@ -89,6 +93,11 @@ nav ul li a {
   font-size: 0.9rem;
   transition: color 0.3s;
 }
+.logo-main a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
 
 nav ul li a:hover {
   color: var(--accent);
@@ -134,11 +143,11 @@ nav ul li a:hover {
 /* Section Titles */
 .section-title {
   text-align: center;
-  margin: 4rem 0 2rem;
+  margin: 4rem 0.2rem;
   color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .section-title strong {
@@ -148,18 +157,23 @@ nav ul li a:hover {
 /* Products Section */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 2.5rem;
   padding: 0 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
+  height: auto;
   margin: 0 auto 4rem;
 }
 
+.btn {
+  margin-top: auto;
+  border-radius: 8px;
+}
 .product-card {
   background-color: var(--light);
   overflow: hidden;
   transition: transform 0.3s;
-  border: 1px solid #e0e0e0;
+  border-radius: 8px;
 }
 
 .product-card:hover {
@@ -197,6 +211,17 @@ nav ul li a:hover {
   margin-bottom: 1rem;
 }
 
+/* Evento Section */
+.div-evento {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  background-color: var(--light);
+  border-radius: 8px;
+}
+
 /* About Section */
 .about {
   display: flex;
@@ -205,6 +230,7 @@ nav ul li a:hover {
   max-width: 1400px;
   margin: 0 auto 4rem;
   background-color: var(--light);
+  border-radius: 8px;
 }
 
 .about-img {
@@ -235,19 +261,29 @@ nav ul li a:hover {
   margin-right: 1.5rem;
 }
 
-/*contato*/
+/* contato*/
 #contato {
-  background-color: var(--light);
+  background: linear-gradient(135deg, var(--light), #f8f8f8);
   padding: 4rem 2rem;
   text-align: center;
 }
 
+.div-contato {
+  background-color: var(--secondary);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease;
+}
+
 #contato .section-title {
   color: var(--primary);
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  margin: 1rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 
 #contato p {
@@ -262,13 +298,13 @@ nav ul li a:hover {
 
 #contato i {
   color: var(--primary);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   min-width: 25px;
 }
 
 #contato h3 {
-  margin: 2.5rem 0 1.5rem;
-  font-size: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  font-size: 1.6rem;
   color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -277,6 +313,7 @@ nav ul li a:hover {
 .social-icons {
   display: flex;
   justify-content: center;
+  gap: 15px;
   margin-bottom: 1.5rem;
 }
 
@@ -284,17 +321,34 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
   text-decoration: none;
+  background-color: white;
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-icons a:hover {
   background-color: var(--accent);
-  transform: translateY(-3px);
+  color: white;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
@@ -339,6 +393,14 @@ footer {
   nav ul li {
     margin: 0 0 1.5rem 0;
   }
+  .hero {
+    padding: 4rem 1rem 3rem;
+    min-height: 40vh;
+    background-image: url(/img/wallpaper6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 
   .hero h1 {
     font-size: 2rem;
@@ -350,17 +412,40 @@ footer {
 
   .about {
     flex-direction: column;
+    padding: 1.5rem;
+    margin: 0 1rem;
   }
 
-  .about-img {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1.5rem;
+  .div-evento {
+    margin: 1rem;
+  }
+
+  .eventos p {
+    text-align: justify;
+  }
+  .eventos .about {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .about img {
+    align-items: center;
+    margin-top: 1.5rem;
   }
 
   .section-title {
     font-size: 1.5rem;
-    margin: 3rem 0 1.5rem;
+    margin: 4rem 0.5rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .div-contato {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 }
 
@@ -387,6 +472,10 @@ footer {
   .btn {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
   }
 
   .products,
